@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>UI Snip privacy policy</title>
-  <meta name="description" content="What UI Snip, a Chrome extension, reads, what it sends when you ask for AI, and what its server keeps.">
+  <title>UI Snip Beta privacy policy</title>
+  <meta name="description" content="What UI Snip Beta, a Chrome extension, reads on your computer, what it keeps, and why its AI buttons send nothing in version 0.1.0.">
   <link rel="icon" type="image/png" href="favicon.png">
   <style>
     :root {
@@ -37,9 +37,12 @@
     }
     h1 { margin: 0 0 8px; font-size: 32px; line-height: 1.2; letter-spacing: -0.02em; }
     h2 { margin: 36px 0 8px; font-size: 21px; line-height: 1.3; color: var(--accent); }
+    h3 { margin: 24px 0 6px; font-size: 17px; line-height: 1.35; color: #fff; }
     p, ul { margin: 0 0 14px; }
     ul { padding-left: 22px; }
     li { margin-bottom: 8px; }
+    li > ul { margin: 6px 0 0; }
+    li > ul > li { margin-bottom: 4px; }
     li::marker { color: var(--accent); }
     .lead { color: var(--muted); font-style: italic; }
     strong { color: #fff; }
@@ -75,75 +78,133 @@
     </header>
 
     <main>
-      <h1>Privacy policy</h1>
-      <p class="lead">Effective November 12, 2026. UI Snip, listed as UI Snip Beta in the Chrome Web Store, is a Chrome extension made by Manoj Singh Rawat. For questions, write to <a href="mailto:manojsinghrawat0003@gmail.com">manojsinghrawat0003@gmail.com</a>.</p>
-      <p>UI Snip works inside your browser. It sends nothing unless you click <strong>Generate prompt</strong> or <strong>Enhance with AI</strong>. Then it sends only what's listed below, through UI Snip's server, to Google's Gemini.</p>
+      <h1>UI Snip Beta — Privacy Policy</h1>
+      <p class="lead">Effective November 15, 2026. UI Snip Beta is a Chrome extension, made by Manoj Singh Rawat. It turns a design, a motion, or an animation on a web page into a prompt for AI coding tools. For questions, write to <a href="mailto:manojsinghrawat0003@gmail.com">manojsinghrawat0003@gmail.com</a>.</p>
+      <p>This policy describes version 0.1.0 of UI Snip Beta, as published in the Chrome Web Store. To see your version, open <code>chrome://extensions</code>.</p>
 
-      <h2>What UI Snip reads on your computer</h2>
-      <p>It reads only the tab where you click its toolbar button, and only what you point it at:</p>
+      <h2>The short version</h2>
       <ul>
-        <li><strong>Select Design:</strong> the element you pick. It reads its layout, sizes, fonts, colors, spacing, borders, shadows, transitions, image sizes, and structure (tag and class names). It describes text by its purpose and length, never by its words, and takes a screenshot of the element.</li>
-        <li><strong>Capture Motion:</strong> the area you draw. With your permission, it records the tab for about five seconds and keeps frames of that area.</li>
-        <li><strong>Inspect Animation:</strong> the element you pick. It reads what changes as it animates, its timing settings, and its tag, class names, and size.</li>
+        <li><strong>Everything happens in your browser.</strong> UI Snip Beta reads a page only when you start one of its tools there, and only the part you choose. It makes its prompts on your computer.</li>
+        <li><strong>Its AI isn't available yet.</strong> The AI buttons are there, but what you capture is never sent: not to UI Snip's server, and not to Google.</li>
+        <li><strong>Nothing is stored.</strong> UI Snip Beta keeps nothing in your browser's storage, and has no accounts, analytics, ads, or tracking.</li>
+        <li><strong>Never sold.</strong> UI Snip Beta doesn't sell data, and doesn't use it for advertising or credit decisions.</li>
       </ul>
-      <p>UI Snip saves none of this, except what you choose to copy or download. The only thing it keeps in your browser is your AI agreement and your beta access code, so it doesn't ask again. <strong>Withdraw agreement</strong>, in UI Snip, deletes both. It has no account, analytics, ads, or crash reports.</p>
 
-      <h2>What's sent when you ask for AI</h2>
+      <h2>What UI Snip Beta reads, and what stays on your computer</h2>
+      <p>UI Snip Beta works only on the tab where you click its toolbar button, and only after you choose a tool. Chrome lets it work there until you leave that page.</p>
+
+      <h3>Select Design</h3>
+      <ul>
+        <li><strong>While you choose,</strong> it follows your pointer to highlight the element under it.</li>
+        <li><strong>For what you choose</strong> (an element, a section, or the whole page), it reads:
+          <ul>
+            <li>layout and sizes;</li>
+            <li>fonts, colors, spacing, borders, and shadows;</li>
+            <li>transitions and image sizes;</li>
+            <li>structure: tag names, class names, and ids.</li>
+          </ul>
+        </li>
+        <li><strong>Text is described, not copied.</strong> It notes each text's role and length, never its words. It doesn't read form values or text you're editing.</li>
+        <li><strong>It takes a screenshot</strong> of what you chose. The screenshot shows whatever is visible there, including any text or images.</li>
+        <li><strong>It writes a prompt</strong> from what it read. The prompt doesn't include the page's words or its address.</li>
+      </ul>
+
+      <h3>Capture Motion</h3>
+      <ul>
+        <li><strong>You draw an area</strong> on the page. The first time, Chrome asks you to allow tab capture.</li>
+        <li><strong>It records</strong> after a 3-second countdown: the tab, for up to 5 seconds, as video only, with no sound. It keeps frames of the area you drew.</li>
+        <li><strong>It makes a storyboard</strong> image from the frames.</li>
+        <li><strong>Generate prompt</strong> tries the AI first. The AI isn't available, so UI Snip Beta then writes the prompt itself, asking your coding tool to read the storyboard.</li>
+      </ul>
+
+      <h3>Inspect Animation</h3>
+      <ul>
+        <li><strong>You choose an element, then make its animation happen,</strong> for example by hovering, clicking, focusing, or scrolling. UI Snip Beta watches for up to 5 seconds.</li>
+        <li><strong>It reads what Chrome reports</strong> about the element's animations (their timing, easing, and keyframes). It also measures how the element, and some of its parts, change.</li>
+        <li><strong>It notes your interaction,</strong> to work out what started the animation:
+          <ul>
+            <li>the position of your pointer;</li>
+            <li>when you press and release it;</li>
+            <li>how the page, or a part of it, scrolls;</li>
+            <li>whether the element is hovered or focused;</li>
+            <li>which classes the page adds or removes;</li>
+            <li>the names, but not the values, of other attributes that change.</li>
+          </ul>
+        </li>
+        <li><strong>It never records</strong> keystrokes, form values, or page text.</li>
+        <li><strong>It writes a report and a prompt.</strong> The report names the likely trigger, such as a hover or a click, and when it happened. It doesn't include your pointer's path.</li>
+      </ul>
+
+      <h3>What stays on your computer</h3>
+      <ul>
+        <li><strong>In memory only:</strong> screenshots, frames, storyboards, reports, prompts, and the interaction notes above. They're gone when you start over, leave or reload the page, or close the side panel.</li>
+        <li><strong>What you save yourself:</strong> copying puts a prompt or an image on your clipboard. Downloading saves an image (a screenshot, a frame, or a storyboard) to your downloads folder.</li>
+        <li><strong>Nothing in storage:</strong> UI Snip Beta keeps no settings, history, or other data in your browser's storage.</li>
+        <li><strong>The site's name</strong> (its hostname) shows in the side panel while you work, so you know which page you're on. UI Snip Beta doesn't keep it or send it anywhere.</li>
+      </ul>
+
+      <h2>The AI buttons</h2>
+      <p>UI Snip Beta shows three AI buttons: <strong>Generate prompt</strong> in Capture Motion, and <strong>Enhance with AI</strong> in Select Design and Inspect Animation. The notice beside each says what it would send to Google's Gemini: that Google may use it to improve its products, and that people at Google may read it. That describes how the AI is meant to work. In this version, the AI isn't available:</p>
+      <ul>
+        <li><strong>The check.</strong> When you click an AI button, UI Snip Beta prepares the image or report on your computer. Chrome then asks UI Snip's server whether the request may be sent.</li>
+        <li><strong>The refusal.</strong> The server doesn't accept requests from this version, so Chrome stops there.</li>
+        <li><strong>What's sent:</strong> nothing you captured, to UI Snip's server or to Google.</li>
+        <li><strong>What you see:</strong> "Couldn't reach the AI", and UI Snip Beta keeps or writes its own prompt instead.</li>
+        <li><strong>What the check carries:</strong> no content. Only what any web request carries: your IP address, details of your browser, and that the request comes from UI Snip Beta.</li>
+      </ul>
+      <p>Before UI Snip's AI becomes available, this policy will be updated to say what's sent, to whom, and the choices you'll have.</p>
+
+      <h2>UI Snip's server and Cloudflare</h2>
+      <p>UI Snip's server runs on Cloudflare Workers.</p>
+      <ul>
+        <li><strong>The server keeps nothing</strong> from the checks above.</li>
+        <li><strong>Cloudflare</strong> handles your IP address and the request in order to deliver them, under <a href="https://www.cloudflare.com/privacypolicy/">its own privacy policy</a>.</li>
+        <li><strong>Live logs:</strong> when fixing a problem, the developer can watch live request information from Cloudflare, such as the time, the IP address, the country, and the browser of each request. It never includes what you captured, and UI Snip doesn't save it.</li>
+      </ul>
+
+      <h2>How long information is kept</h2>
       <div class="table">
         <table>
-          <thead><tr><th scope="col">You click</th><th scope="col">What's sent</th></tr></thead>
+          <thead><tr><th scope="col">Information</th><th scope="col">Where</th><th scope="col">How long</th></tr></thead>
           <tbody>
-            <tr><td><strong>Generate prompt</strong>, in Capture Motion</td><td>A storyboard image of the frames, and the code stack you chose</td></tr>
-            <tr><td><strong>Enhance with AI</strong>, in Select Design</td><td>The element's screenshot, the design facts UI Snip wrote, and your stack</td></tr>
-            <tr><td><strong>Enhance with AI</strong>, in Inspect Animation</td><td>The animation report UI Snip wrote, and your stack</td></tr>
+            <tr><td>Screenshots, frames, storyboards, reports, prompts, and interaction notes</td><td>UI Snip Beta's memory, in your browser</td><td>Until you start over, leave or reload the page, or close the side panel</td></tr>
+            <tr><td>What you copy or download</td><td>Your clipboard or downloads folder</td><td>Until you delete it</td></tr>
+            <tr><td>The check when you click an AI button</td><td>UI Snip's server</td><td>Not kept</td></tr>
+            <tr><td>Live request information</td><td>Seen by the developer, when fixing a problem</td><td>Not saved</td></tr>
+            <tr><td>Your IP address and request, in transit</td><td>Cloudflare</td><td>Under Cloudflare's privacy policy</td></tr>
           </tbody>
         </table>
       </div>
-      <p>Each AI request also carries your beta access code.</p>
-      <p>Images are sent as JPEG, at most 2,000 pixels on the longest side. The facts and the report are cut to 24,000 characters at most, and everything travels over HTTPS.</p>
-      <p>Never sent: the page's web address, its cookies, your passwords, your browsing history, or other tabs. A screenshot or storyboard shows whatever is visible in what you chose, so use the AI on public pages only.</p>
-
-      <h2>What UI Snip's server keeps</h2>
-      <p>The server runs on Cloudflare. It passes your request to Gemini and streams the answer back, without saving either. To stop abuse, it counts AI requests:</p>
-      <ul>
-        <li><strong>Per day:</strong> it turns your IP address into a code, using a secret key, and counts that code's requests for the day, in US Pacific time. It never stores your IP address. It keeps today's and yesterday's counts, and deletes older ones the next time it counts a request.</li>
-        <li><strong>Per tester:</strong> it turns your access code into a code the same way, and counts its requests for the day. It never stores the access code. These counts are kept and deleted like the daily ones.</li>
-        <li><strong>Per minute:</strong> Cloudflare's rate limiter uses your IP address to allow 3 requests a minute. UI Snip doesn't store it.</li>
-        <li><strong>Country:</strong> it reads the country Cloudflare finds for your IP address, and refuses AI requests from the European Economic Area, Switzerland, and the UK, and from Tor or unknown locations. It doesn't keep the country.</li>
-      </ul>
-      <p>If something fails, the server may log a short error message, which never includes what you sent.</p>
-
-      <h2>What Google and Cloudflare do with it</h2>
-      <p>UI Snip uses <strong>Gemini's free tier</strong>. Under <a href="https://ai.google.dev/gemini-api/terms">Google's terms for it</a>, Google uses what's sent, and the answers, to provide, improve, and develop its products and machine-learning technologies. Human reviewers may read, annotate, and process them.</p>
-      <p>The terms don't say how long Google keeps free-tier data, and <a href="https://policies.google.com/privacy">Google's privacy policy</a> also applies. So never use UI Snip's AI on pages with personal, confidential, or sensitive information, such as email, banking, logged-in dashboards, internal tools, or client work.</p>
-      <p>Cloudflare handles your IP address and the request in order to deliver them, under <a href="https://www.cloudflare.com/privacypolicy/">its privacy policy</a>.</p>
-
-      <h2>Who can use the AI</h2>
-      <p>You must be 18 or older, and outside the European Economic Area, Switzerland, and the United Kingdom. Google's terms allow only its paid service for users there, and UI Snip uses the free one, so its server refuses AI requests from those countries. During the beta, the Chrome Web Store doesn't offer UI Snip Beta there either.</p>
 
       <h2>Permissions</h2>
       <div class="table">
         <table>
-          <thead><tr><th scope="col">Permission</th><th scope="col">Why UI Snip needs it</th></tr></thead>
+          <thead><tr><th scope="col">Permission</th><th scope="col">Why UI Snip Beta needs it</th></tr></thead>
           <tbody>
-            <tr><td>Side panel</td><td>To show UI Snip beside the page</td></tr>
-            <tr><td>Active tab</td><td>To work on the tab where you click UI Snip's button, until you leave that page</td></tr>
-            <tr><td>Scripting</td><td>To run the picker and the measurements in that tab</td></tr>
-            <tr><td>Tab capture, asked when you first use Capture Motion</td><td>To record the area you draw. Chrome warns that this can read your data on all websites. UI Snip records only the tab you're capturing, while it captures.</td></tr>
+            <tr><td>Side panel</td><td>To show UI Snip Beta beside the page.</td></tr>
+            <tr><td>Active tab</td><td>To work on the tab where you click UI Snip Beta's button, until you leave that page.</td></tr>
+            <tr><td>Scripting</td><td>To run the picker and the measurements in that tab, when you start a tool.</td></tr>
+            <tr><td>Tab capture, asked the first time you use Capture Motion</td><td>To record the area you draw. Chrome warns that this permission can read data on all websites. UI Snip Beta records only the tab you're capturing, and only while it captures.</td></tr>
           </tbody>
         </table>
       </div>
-      <p>UI Snip has no access to websites in the background.</p>
+      <p>UI Snip Beta has no access to websites in the background.</p>
 
       <h2>Your choices</h2>
       <ul>
-        <li>Nothing is sent until you click. Without the AI buttons, everything stays on your computer.</li>
-        <li>To remove UI Snip, open <code>chrome://extensions</code> and click <strong>Remove</strong>. The server's counts expire as described above.</li>
-        <li>The counts hold no name, email, IP address, or access code. Each tester has their own code, so I could tell whose count is whose, but a count only says how many AI requests were made that day. For questions, write to <a href="mailto:manojsinghrawat0003@gmail.com">manojsinghrawat0003@gmail.com</a>.</li>
+        <li><strong>Use it without AI.</strong> Every tool works without it.</li>
+        <li><strong>Remove UI Snip Beta.</strong> Open <code>chrome://extensions</code> and click <strong>Remove</strong>. It keeps nothing in your browser's storage, so nothing is left behind.</li>
+        <li><strong>Delete what you saved.</strong> Prompts and images you copied or downloaded are yours to delete.</li>
       </ul>
 
+      <h2>Children</h2>
+      <p>UI Snip Beta isn't meant for children.</p>
+
       <h2>Changes</h2>
-      <p>If this policy changes, the new version will be posted here with a new date, and testers will be told by email.</p>
+      <p>If this policy changes, the new version will be posted here, with a new effective date. It will change before UI Snip's AI becomes available.</p>
+
+      <h2>Contact</h2>
+      <p>Manoj Singh Rawat — <a href="mailto:manojsinghrawat0003@gmail.com">manojsinghrawat0003@gmail.com</a></p>
     </main>
 
     <footer>UI Snip · Manoj Singh Rawat · <a href="mailto:manojsinghrawat0003@gmail.com">manojsinghrawat0003@gmail.com</a></footer>
